@@ -1,0 +1,29 @@
+# Zadanie: Obliczanie średniej arytmetycznej
+#
+# Cel: Napisz program, który oblicza średnią arytmetyczną z podanej przez użytkownika
+# listy liczb. Program powinien prosić użytkownika o wprowadzenie liczby elementów
+# do obliczenia średniej, a następnie o wprowadzenie każdej z tych liczb.
+
+# Kroki do wykonania:
+# 1. Poproś użytkownika o wprowadzenie liczby elementów, z których ma być obliczona średnia.
+# 2. Zainicjuj zmienną 'sum' wartością 0, która będzie przechowywać sumę wprowadzonych liczb.
+# 3. Użyj pętli while do pobrania od użytkownika określonej liczby elementów. Po wprowadzeniu
+#    każdej liczby dodaj ją do zmiennej 'sum'.
+# 4. Oblicz średnią arytmetyczną, dzieląc sumę przez liczbę elementów.
+# 5. Wyświetl wynikową średnią arytmetyczną z dokładnością do dwóch miejsc po przecinku.
+# 6. Jeśli użytkownik wprowadzi liczbę elementów równą 0, wyświetl informację, że nie można
+#    obliczyć średniej z 0 elementów.
+
+iloscElementow = int(input("Wprowadz liczbe elementow sredniej:"))
+sum = 0
+
+if iloscElementow > 0:
+  i = iloscElementow
+  while i > 0:
+    nowyElement = float(input("Podaj kolejny element:"))
+    sum += nowyElement
+    i -= 1
+  srednia = sum / iloscElementow
+  print("Srednia wynosi:", srednia)
+else:
+  print("Nie mozna obliczyc sredniej dla 0 elementow")
